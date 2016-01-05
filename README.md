@@ -12,13 +12,14 @@ representations will be translated into a GraphViz file via the GraphVizOutputSt
 
 
 #Ashok
+Added picture of lab 1-3 UML
+Added lab 1-3 files
 Finalized the UML Diagram
 Took a stab at trying to implement ASM parsing
 
 #Derrick
 Set up the repository and the project
 Did the Readme
-Added picture of lab 1-3 UML
 Created a rough version of the project UML
 Created a test suite for all tests and for all milestone 1 tests
 Created a few dummy classes for unit testing purposes
