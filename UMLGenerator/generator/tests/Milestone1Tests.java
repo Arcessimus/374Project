@@ -6,11 +6,11 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
-	Milestone1Tests.class
-	//Milestone2Tests.class
-	//Milestone3Tests.class
+	ASMParsingTests1.class,
+	GraphVizTests1.class
 })
 
-public class RunAll {
+public class Milestone1Tests {
 
+	
 }
