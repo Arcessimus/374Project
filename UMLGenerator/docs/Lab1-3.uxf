@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.3">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>10</y>
+      <w>240</w>
+      <h>360</h>
+    </coordinates>
+    <panel_attributes>problem::DWatcher
+--
+-watcher: WatchService
+-processes: List&lt;Process&gt;
+-bool: boolean
+-dir: Path
+-observers: List&lt;IDSubcriber&gt;
+-data: IDData
+--
++DWatcher(Path dir): ctor
++run(): void
++addSubscriber(IDSubcriber s): void
++remSubscriber(IDSubcriber s): void
++setData(IDData s): void
++getData(): IDData
+-notifyObservers(): void
++stopGracefully(): void
++addProcess(Process p): void
++clearEverything(): void
++isRunning(): boolean
++getApplicationsCount(): int
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>260</x>
+      <y>10</y>
+      <w>240</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+problem::AbstractDWatcher
+--
+--
++addSubscriber(IDSubcriber s): void
++remSubscriber(IDSubcriber s): void
++setData(IDData s): void
++getData(): IDData
++run(): void
++stopGracefully(): void
++addProcess(Process p): void
++clearEverything(): void
++isRunning(): boolean
++getApplicationsCount(): int
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>510</x>
+      <y>10</y>
+      <w>290</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>problem::DirectoryData
+--
++Name: String
++file: Path
+--
++DirectoryData(String name, Path file): ctor
++getFile(): Path
++getName(): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>810</x>
+      <y>10</y>
+      <w>360</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>problem::AppLauncher
+--
+-map: Map&lt;String, IAppLauncher&gt;
+--
+~AppLauncher(Map&lt;String, IAppLauncher&gt; map): ctor
++handleDirectoryEvent(AbstractDWatcher watcher): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>380</y>
+      <w>170</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>problem::HTMLLauncher
+--
+-com = "explorer": String
+--
++string(): String
++process(Path p): Process
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>190</x>
+      <y>380</y>
+      <w>180</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+problem::IAppLauncher
+--
+--
++string(): String
++process(Path p): Process
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>380</x>
+      <y>380</y>
+      <w>140</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+problem::IDData
+--
+--
++getName(): String
++getFile(): Path
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>530</x>
+      <y>380</y>
+      <w>170</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>problem::Text
+--
++com = "notepad": String
+--
++string(): String
++process(Path p): Process
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>710</x>
+      <y>380</y>
+      <w>370</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+problem::IDSubcriber
+--
+--
++handleDirectoryEvent(AbstractDWatcher watcher): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>500</y>
+      <w>170</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>problem::Display
+--
+--
++main(String[] args): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>290</x>
+      <y>630</y>
+      <w>370</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>problem::print
+--
+--
++handleDirectoryEvent(AbstractDWatcher watcher): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>400</x>
+      <y>80</y>
+      <w>190</w>
+      <h>360</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;340.0;170.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>770</x>
+      <y>60</y>
+      <w>110</w>
+      <h>370</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;350.0;90.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>190</x>
+      <y>80</y>
+      <w>220</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>200.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>70</x>
+      <y>410</y>
+      <w>190</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>170.0;10.0;10.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>270</x>
+      <y>440</y>
+      <w>330</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;90.0;110.0;310.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>320</x>
+      <y>420</y>
+      <w>570</w>
+      <h>260</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>550.0;10.0;10.0;240.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>20</x>
+      <y>290</y>
+      <w>50</w>
+      <h>280</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..n</panel_attributes>
+    <additional_attributes>10.0;10.0;20.0;260.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>90</x>
+      <y>450</y>
+      <w>70</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..n</panel_attributes>
+    <additional_attributes>40.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>110</x>
+      <y>100</y>
+      <w>780</w>
+      <h>450</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..n</panel_attributes>
+    <additional_attributes>760.0;10.0;10.0;430.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>110</x>
+      <y>450</y>
+      <w>510</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..n</panel_attributes>
+    <additional_attributes>490.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+</diagram>
