@@ -3,8 +3,8 @@
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>180</x>
-      <y>230</y>
+      <x>190</x>
+      <y>210</y>
       <w>180</w>
       <h>80</h>
     </coordinates>
@@ -15,8 +15,8 @@
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>420</x>
-      <y>230</y>
+      <x>430</x>
+      <y>210</y>
       <w>160</w>
       <h>60</h>
     </coordinates>
@@ -27,8 +27,8 @@
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>620</x>
-      <y>230</y>
+      <x>630</x>
+      <y>210</y>
       <w>190</w>
       <h>50</h>
     </coordinates>
@@ -39,8 +39,8 @@
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>400</x>
-      <y>100</y>
+      <x>410</x>
+      <y>80</y>
       <w>190</w>
       <h>50</h>
     </coordinates>
@@ -51,8 +51,8 @@
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>230</x>
-      <y>120</y>
+      <x>240</x>
+      <y>100</y>
       <w>210</w>
       <h>130</h>
     </coordinates>
@@ -62,8 +62,8 @@
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>460</x>
-      <y>120</y>
+      <x>470</x>
+      <y>100</y>
       <w>50</w>
       <h>130</h>
     </coordinates>
@@ -73,8 +73,8 @@
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>540</x>
-      <y>120</y>
+      <x>550</x>
+      <y>100</y>
       <w>180</w>
       <h>130</h>
     </coordinates>
@@ -84,8 +84,8 @@
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>1010</x>
-      <y>350</y>
+      <x>1020</x>
+      <y>330</y>
       <w>210</w>
       <h>40</h>
     </coordinates>
@@ -96,8 +96,8 @@
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>1010</x>
-      <y>200</y>
+      <x>1020</x>
+      <y>180</y>
       <w>220</w>
       <h>40</h>
     </coordinates>
@@ -108,8 +108,8 @@
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>1090</x>
-      <y>210</y>
+      <x>1100</x>
+      <y>190</y>
       <w>50</w>
       <h>160</h>
     </coordinates>
@@ -119,20 +119,21 @@
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>130</x>
-      <y>430</y>
+      <x>140</x>
+      <y>410</y>
       <w>160</w>
       <h>60</h>
     </coordinates>
-    <panel_attributes>/ITraverser/
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+/ITraverser/
 --</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>90</x>
-      <y>570</y>
+      <x>110</x>
+      <y>540</y>
       <w>230</w>
       <h>60</h>
     </coordinates>
@@ -143,12 +144,54 @@
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>160</x>
-      <y>460</y>
-      <w>60</w>
-      <h>130</h>
+      <x>170</x>
+      <y>440</y>
+      <w>70</w>
+      <h>120</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
-    <additional_attributes>30;30;40;110</additional_attributes>
+    <additional_attributes>30;30;50;100</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>450</x>
+      <y>420</y>
+      <w>120</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+/IClass/
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>600</x>
+      <y>410</y>
+      <w>130</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+/IMethod/
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>770</x>
+      <y>420</y>
+      <w>150</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+/IField/
+--
+</panel_attributes>
+    <additional_attributes/>
   </element>
 </diagram>
