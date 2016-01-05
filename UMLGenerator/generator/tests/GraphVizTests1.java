@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-public class GraphVizTests {
+public class GraphVizTests1 {
 
 	@Test
 	public void test() {
