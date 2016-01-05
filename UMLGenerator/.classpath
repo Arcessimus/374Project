@@ -2,5 +2,6 @@
 <classpath>
 	<classpathentry kind="src" path=""/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/home/theoderic/Documents/Courses/CSSE374/374Project/UMLGenerator/lib/asm-all-5.0.4.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
