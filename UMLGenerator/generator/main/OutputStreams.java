@@ -9,7 +9,7 @@ import java.io.OutputStream;
 public class OutputStreams extends FilterOutputStream {
 	private final  visitor;
 	
-	public OutputStreams(OutputStream out) throws IOException {
+	public OutputStreams (OutputStream out) throws IOException {
 		super(out);
 		this.visitor = new Visitor();
 		this.setupPreVisitCar();
