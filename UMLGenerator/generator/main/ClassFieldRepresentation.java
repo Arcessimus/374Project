@@ -8,6 +8,8 @@ public class ClassFieldRepresentation implements ITraverser,IField{
 	String desc;
 	String signature;
 	Object value;
+	IClass decorated;
+	
 	@Override
 	public int hashCode() {
 		// TODO Auto-generated method stub
@@ -24,13 +26,13 @@ public class ClassFieldRepresentation implements ITraverser,IField{
 		// TODO Auto-generated method stub
 		super.finalize();
 	}
-	public ClassFieldRepresentation(int access, String name, String desc, String signature, Object value) {
-		super();
+	public ClassFieldRepresentation(int access, String name, String desc, String signature, Object value, IClass decorated) {
 		this.access = access;
 		this.name = name;
 		this.desc = desc;
 		this.signature = signature;
 		this.value = value;
+		this.decorated = decorated;
 	}
 	public int getAccess() {
 		return access;
@@ -46,6 +48,9 @@ public class ClassFieldRepresentation implements ITraverser,IField{
 	}
 	public Object getValue() {
 		return value;
+	}
+	public IClass getDecorated() {
+		return this.decorated;
 	}
 	@Override
 	public void accept(ClassVisitor c) {
