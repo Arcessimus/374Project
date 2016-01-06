@@ -1,5 +1,7 @@
 package generator.main;
 
+import org.objectweb.asm.ClassVisitor;
+
 public class ClassRepresentation implements IClass, ITraverser {
 	int version;
 	int access;
@@ -40,6 +42,12 @@ public class ClassRepresentation implements IClass, ITraverser {
 
 	public String[] getInterfaces() {
 		return interfaces;
+	}
+
+	@Override
+	public void accept(ClassVisitor c) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 	

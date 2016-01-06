@@ -1,5 +1,7 @@
 package generator.main;
 
+import org.objectweb.asm.ClassVisitor;
+
 public class ClassFieldRepresentation implements ITraverser,IField{
 	int access;
 	String name;
@@ -16,16 +18,7 @@ public class ClassFieldRepresentation implements ITraverser,IField{
 		// TODO Auto-generated method stub
 		return super.equals(obj);
 	}
-	@Override
-	protected Object clone() throws CloneNotSupportedException {
-		// TODO Auto-generated method stub
-		return super.clone();
-	}
-	@Override
-	public String toString() {
-		// TODO Auto-generated method stub
-		return super.toString();
-	}
+	
 	@Override
 	protected void finalize() throws Throwable {
 		// TODO Auto-generated method stub
@@ -53,5 +46,10 @@ public class ClassFieldRepresentation implements ITraverser,IField{
 	}
 	public Object getValue() {
 		return value;
+	}
+	@Override
+	public void accept(ClassVisitor c) {
+		// TODO Auto-generated method stub
+		
 	}
 }

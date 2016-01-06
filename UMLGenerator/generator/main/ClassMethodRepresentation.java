@@ -1,5 +1,7 @@
 package generator.main;
 
+import org.objectweb.asm.ClassVisitor;
+
 public class ClassMethodRepresentation implements IMethod,ITraverser{
 	@Override
 	public int hashCode() {
@@ -11,16 +13,7 @@ public class ClassMethodRepresentation implements IMethod,ITraverser{
 		// TODO Auto-generated method stub
 		return super.equals(obj);
 	}
-	@Override
-	protected Object clone() throws CloneNotSupportedException {
-		// TODO Auto-generated method stub
-		return super.clone();
-	}
-	@Override
-	public String toString() {
-		// TODO Auto-generated method stub
-		return super.toString();
-	}
+	
 	public int getAccess() {
 		return access;
 	}
@@ -54,5 +47,10 @@ public class ClassMethodRepresentation implements IMethod,ITraverser{
 	String desc;
 	String signature;
 	String[] exceptions;
+	@Override
+	public void accept(ClassVisitor c) {
+		// TODO Auto-generated method stub
+		
+	}
 	
 }
