@@ -10,7 +10,7 @@ digraph UMLGenerator {
 ];
 ClassMethodVisitor[
 	shape = "record",
-	label = "(ClassVisitor|+ ClassMethodVisitor(int)\n)"
+	label = "(ClassVisitor|+ ClassMethodVisitor(int)\n+ClassMethodVisitor(int, Class Visitor)\n)"
 ];
 
 ClassMethodVisitor ->ClassVisitor ;
