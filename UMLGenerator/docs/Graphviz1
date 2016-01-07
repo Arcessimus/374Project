@@ -10,8 +10,46 @@ digraph UMLGenerator {
 ];
 ClassMethodVisitor[
 	shape = "record",
-	label = "(ClassVisitor|+ ClassMethodVisitor(int)\n+ClassMethodVisitor(int, Class Visitor)\n)"
+	label = "(ClassMethodVisitor|+ ClassMethodVisitor(int)\n+ClassMethodVisitor(int, Class Visitor)\n + visitMethod(int, String,String,Sring,String[]) : MethodVisitor\1\n+ addAccess:evel(int)\n + addReturnType(String)\n+addArguments(String))"
 ];
+ClassFieldVisitor[
+	shape = "record",
+	label = "(ClassFieldVisitor|+ ClassFieldVisitor(int)\n+ClassFieldVisitor(int, Class Visitor)\n + visit(int, String,String,Object) : FieldVisitor\1\n)"
+];
+ClassDeclarationVisitor[
+	shape = "record",
+	label = "(ClassDeclarationVisitor|+ ClassDeclarationVisitor(int)\n + visit(int, String,String,Sring,String[]))"
+];
+
+ITraverser[
+	shape = "record",
+	label = "(\<\interface\>\>\nITraverser|)
+];
+IClass[
+	shape = "record",
+	label = "(\<\interface\>\>\nIClass|)
+];
+IField[
+	shape = "record",
+	label = "(\<\interface\>\>\nIField|)
+];
+IMethod[
+	shape = "record",
+	label = "(\<\interface\>\>\nIMethod|)
+];
+ClassFieldRepresentation[
+	shape = "record",
+	label = "(ClassFieldRepresentation|) "
+];
+ClassMethodRepresentation[
+	shape = "record",
+	label = "(ClassMethodRepresentation|)"
+];
+ClassRepresentation[
+	shape = "record",
+	label = "(ClassRepresentation|)"
+];
+
 
 ClassMethodVisitor ->ClassVisitor ;
 ClassFieldVisitor -> ClassVisitor;
