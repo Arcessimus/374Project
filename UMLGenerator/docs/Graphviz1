@@ -1,0 +1,31 @@
+digraph UMLGenerator {
+	rankdir = BT;
+
+	//
+     
+    ClassVisitor[
+	shape = "record",
+	label = "(ClassVisitor|)"
+
+];
+ClassMethodVisitor[
+	shape = "record",
+	label = "(ClassVisitor|+ ClassMethodVisitor(int)\n)"
+];
+
+ClassMethodVisitor ->ClassVisitor ;
+ClassFieldVisitor -> ClassVisitor;
+ClassDeclarationVisitor -> ClassVisitor;
+ClassRepresentation -> ITraverser;
+MethodRepresentation -> ITraverser;
+MethodRepresentation -> IMethod;
+FieldRepresentation -> ITraverser;
+FieldRepresentation -> IField;
+ClassRepresentation -> IClass;
+GraphVizOutputStream -> FilterOutputStream
+
+          
+   
+	
+
+}
